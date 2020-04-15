@@ -2,7 +2,9 @@ class AncestorColumn extends Column
 {
     constructor(parent, ticket, name = "ancestorColumn")
     {
-        super(parent, ticket.user, ticket.ancestors, name);
+        const tickets = ticket.ancestors;
+        tickets.push(ticket);
+        super(parent, ticket.user, tickets, name);
         const _this = this;
 
         this.ticket = ticket;

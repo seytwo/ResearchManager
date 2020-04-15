@@ -1,8 +1,10 @@
-class ProgressColumn extends AncestorColumn
+class ProgressColumn extends Column
 {
     constructor(parent, task, name = "progressColumn")
     {
-        super(parent, task, name);
+        const tickets = Array.from(parent.controller.tickets.values())
+            .filter((ticket) => ticket.isAncestor(task));
+        super(parent, task.user, tickets, name);
         const _this = this;
 
         this.task = task;

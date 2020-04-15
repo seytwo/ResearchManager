@@ -44,12 +44,11 @@ class Ticket extends Data
     get ancestors()
     {
         const tickets = new Array();
-        for (const ticket of this.controller.tickets.values())
+        let ticket = this;
+        while (ticket.parent != null)
         {
-            if (ticket.isAncestor(this))
-            {
-                tickets.push(ticket);
-            }
+            ticket = ticket.parent;
+            tickets.push(ticket);
         }
         return tickets;
     }
