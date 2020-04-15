@@ -29,7 +29,9 @@ class Controller
         const ids = Path.getAll(root + "\\data\\ticket");
         for (const id of ids)
         {
-            const data = IO.readJson(Path.getLatest(root + "\\data\\ticket\\" + id + "\\data"));
+            const path = Path.getLatest(root + "\\data\\ticket\\" + id + "\\data");
+            console.log(path);
+            const data = IO.readJson(path);
             const ticket = Ticket.create(id, data["type"], data, this);
         }
     }
