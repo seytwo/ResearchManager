@@ -75,7 +75,8 @@ deckでは以下のことができます．
 #### exe/appファイルから実行する方法
 1. npx electron-packager ./src ResearchManager --platform=(win32/darwin) --arch=x64 --overwrite  
 （(win32/darwin)はどちらかを選択；ResearchManager-(win32/darwin)-x64を作成）
-2. [ResearchManager/ResearchManager-(win32/darwin)-x64/resources]に[ResearchManager/data]をコピー
+2. ~~[ResearchManager/ResearchManager-(win32/darwin)-x64/resources]に[ResearchManager/data]をコピー~~
+2. [C:ResearchManager]を作成し，[ResearchManager/data]をコピー
 3. [ResearchManager/ResearchManager-(win32/darwin)-x64/ResearchManager.exe]を実行
 
 ### 使い方
