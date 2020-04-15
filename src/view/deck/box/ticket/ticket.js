@@ -18,6 +18,7 @@ class TicketBox extends Box
             = DateTime.toString(this.ticket.data.get("updatetime"));
         this.main.right.title.element.value = this.ticket.data.get("title");
         this.main.right.text.element.value = this.ticket.data.get("text");
+        this.main.left.typeSelector.options.get(ticket.data.get("type")).element.selected = true;
         if (this.ticket.parent != null)
         {
             this.main.right.parentBox.input.element.value = this.ticket.parent.id;
