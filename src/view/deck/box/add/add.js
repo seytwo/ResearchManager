@@ -11,6 +11,7 @@ class AddBox extends Box
         this.main.left.showProgressButton.element.hidden = true;
         this.main.left.fileSelector.element.hidden = true;
         this.main.right.parentBox.button.element.hidden = true;
+        this.main.right.parentBox.input.element.readOnly = true;
 
         this.main.right.text.element.addEventListener("keydown", (event) =>
         {

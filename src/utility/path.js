@@ -2,7 +2,7 @@ class Path
 {
     static root()
     {
-        return Path.get("..");
+        return Path.get("C:\\ResearchManager");
     }
 
     static get(path)

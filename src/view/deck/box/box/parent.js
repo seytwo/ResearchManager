@@ -8,6 +8,7 @@ class BoxParent extends Div
         this.element.style.display = "flex";
 
         this.input = new TextArea(this, 1, this.nameid + ".input");
+        this.input.element.placeholder = "parent";
         
         this.button = new Label("input", this, this.nameid + ".button");
         this.button.appendElement("🌳");
