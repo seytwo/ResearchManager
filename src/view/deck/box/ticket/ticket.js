@@ -7,9 +7,6 @@ class TicketBox extends Box
 
         this.ticket = ticket;
 
-        // タイプ選択ボタンを消す
-        // this.main.left.typeSelector.element.hidden = true;
-
         // チケットの内容を表示
         this.details.summary.element.innerHTML 
             = DateTime.toString(this.ticket.data.get("datetime")) 
@@ -132,7 +129,14 @@ class TicketBox extends Box
             const root = Path.root() + "\\data\\ticket\\" + this.ticket.id + "\\data";
             const number = Path.getAll(root).length;
             const path = root + "\\" + number + ".json";
-            IO.writeJson(path, this.ticket.data, (error) => {});
+            IO.writeJson(path, this.ticket.data, (error) => 
+            {
+                if (error != null)
+                {
+                    console.log(error);
+                }
+            });
+            console.log(this.ticket);
         }
     }
 }
